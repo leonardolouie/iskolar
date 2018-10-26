@@ -1,0 +1,127 @@
+/* Large screen desktop */
+@media (min-width: 1365px) and (max-width: 1500px){
+#quickViewModal .close {
+	right: 200px;
+}
+
+
+}
+
+@media (min-width: 1200px) and (max-width: 1299px){
+
+#quickViewModal .close {
+	right: 130px;
+}
+
+}
+
+
+@media (min-width: 1170px) and (max-width: 1299px){
+
+ 
+
+
+}
+
+
+
+/* Normal desktop :992px. */
+@media (min-width: 992px) and (max-width: 1169px) {
+
+.newsletter-section .newsletter-title h6 {
+	font-size: 22px;
+}
+#quickViewModal .close {
+	right: 20px;
+}
+
+}
+
+
+/* Tablet desktop :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+  .cart-total {
+    margin-top: 30px;
+  }
+  .mb-half, .feature-box.type-2,.banner-with-text h2, .widgettitle, 
+  .blog-grid, .team-wrapper, .info-box, .shop-toolbar, .user-info, .shop-products-wrapper 
+  .product-layout.product-list, .checkout-wrapper .order-summary .product-container, .single-post-wrapper .post-meta {
+    margin-bottom: 30px;
+  }
+header #google_translate_element {
+	display: none;
+}
+.sidebar-widget:nth-last-child(2) {
+	margin-bottom: 30px;
+}
+#secondary.widget-area {
+	margin-top: 50px;
+} 
+#secondary.widget-area {
+	margin-top: 80px;
+}
+  
+#quickViewModal .close {
+	right: 10px;
+}
+  
+}
+
+
+/* Small and large mobile :320px. */
+@media (max-width: 767px) {
+  .cart-total {
+    margin-top: 30px;
+  }
+  .cart-buttons .theme-default-button{
+    padding: 8px 20px;
+  }
+
+  .mb-half, .feature-box, .feature-box.type-2, .promo-banner, .banner-with-text h2, .widgettitle, 
+  .blog-grid, .team-wrapper, .info-box, .shop-toolbar, .user-info, .shop-products-wrapper 
+  .product-layout.product-list, .checkout-wrapper .order-summary .product-container, .single-post-wrapper .post-meta {
+    margin-bottom: 30px;
+  }
+header #google_translate_element {
+	display: none;
+}
+  #secondary.widget-area {
+    margin-top: 50px;
+  } 
+  
+  #quickViewModal .close {
+	right: 48%;
+	top: 145px;
+}
+
+  .product-list .product-image img {
+    max-width: 100%;
+  }
+
+}
+
+
+/* Large Mobile :480px. */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+
+}
+
+/* Small Mobile :320px. */
+@media only screen and (max-width: 479px) {
+  .login-form-container {
+    padding: 30px 20px;
+  }
+  .form-action-button .theme-default-button + .theme-default-button, 
+  .cart-buttons .theme-default-button + .theme-default-button{
+    margin-left: 0;
+    margin-top: 20px;
+  }
+  .form-action-button .theme-default-button,
+  .cart-buttons .theme-default-button,
+  .guest-form-container .theme-default-button{
+    float: left;
+    width: 100%;
+  }
+  
+}

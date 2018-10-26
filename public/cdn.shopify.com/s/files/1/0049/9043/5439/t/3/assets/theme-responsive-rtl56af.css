@@ -1,0 +1,79 @@
+/* Large screen desktop */
+@media (min-width: 1365px) and (max-width: 1500px){
+
+
+}
+
+@media (min-width: 1200px) and (max-width: 1299px){
+
+
+}
+
+
+@media (min-width: 1170px) and (max-width: 1299px){
+
+ 
+
+
+}
+
+
+
+/* Normal desktop :992px. */
+@media (min-width: 992px) and (max-width: 1169px) {
+
+  
+
+}
+
+
+/* Tablet desktop :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+
+ .testimonial-section .offset-lg-2 {
+	margin-right: 6.667%;
+} 
+  
+}
+
+
+/* Small and large mobile :320px. */
+@media (max-width: 767px) {
+
+  .header-cart {
+    margin-right: inherit;
+    margin-left: inherit;
+  } 
+  .footer-copyright .footer-payment {
+    text-align: center;
+  }
+  .posts-single.media .mr-xl-4, .mx-xl-4 {
+	margin-left: 0;
+	margin-right: 10px !important;
+}
+.team-wrapper .team-socials {
+	left: -15px;
+	right: auto;
+}
+ .team-wrapper:hover .team-socials .chain-animation {
+	right: -20px;
+	left: auto;
+}
+  .testimonial-section .offset-lg-2 {
+    margin-right: 0;
+  }
+  
+}
+
+
+/* Large Mobile :480px. */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+
+}
+
+/* Small Mobile :320px. */
+@media only screen and (max-width: 479px) {
+
+  
+}

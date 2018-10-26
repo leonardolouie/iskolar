@@ -1,0 +1,244 @@
+/*
+    Template Name: Pebona
+    Author: HasTech
+    Description: Shopify Theme
+    Version: 1.0
+
+*/
+
+
+::-webkit-selection {
+    background: #cc2121;
+}
+::-moz-selection {
+    background: #cc2121;
+}
+::selection {
+    background: #cc2121;
+}
+
+/************************************************************
+    c03 - Base - Colors
+*************************************************************/
+
+a:focus,
+a:active,
+a:hover,
+.btn-link:hover,
+.btn-link:focus,
+.btn-link:active,
+.color-primary,
+.header-cart button:focus i,
+.header-cart button:hover i,
+.header-cart .single-cart-item .cart-price,
+.header-cart .shopping-cart-total h4>span,
+.header-cart-area .list-inline .list-inline-item a:hover,
+.header-cart-area .list-inline .list-inline-item a:focus,
+#main_nav>ul>li.active>a,
+#main_nav>ul>li:hover>a,
+#main_nav>ul>li.active .active>a:not(.mega-menu-title),
+#main_nav .mega-container .mega-menu-title:hover,
+#main_nav .mega-container a:hover,
+#main_nav .mega-container a:focus,
+#main_nav>ul>li>ul a:hover,
+#primary_slider .swiper-arrow:hover,
+.text-btn.dark:hover,
+.banner-with-text h1,
+.banner-with-text h2 span,
+.swiper-arrow:hover,
+.nav.nav-pills .nav-link:hover,
+.nav.nav-pills .nav-link.active,
+.product-price .price-new,
+.wishlist-compare>button:hover,
+.wishlist-compare>button:hover::before,
+.widget-content .footer-contact>p a:hover,
+.recent-posts-widget-container .post-title h5 a:hover,
+.recent-posts-widget .post-title h5 a:hover,
+.widgetized-menu li a:hover,
+.list-categories-widget button[aria-expanded="true"],
+.list-categories-widget button:hover,
+.list-categories-widget .cat-sub-menu a:hover,
+.list-widget .list-group>a:hover,
+.list-widget .list-group>a:focus,
+.categories-widget ul li a:hover,
+.categories-widget ul li a:focus,
+.categories-widget ul li a:hover::before,
+.categories-widget ul li a:focus::before,
+.color-widget .color-options li:hover a,
+.instagram-area p a,
+.breadcrumb .breadcrumb-item:hover,
+.breadcrumb .breadcrumb-item:focus,
+.breadcrumb .breadcrumb-item.active,
+.pagination-area .pagination li a:hover,
+.pagination-area .pagination li a:focus,
+.pagination-area .pagination li span:hover,
+.pagination-area .pagination li span:focus,
+.pagination-area .pagination li.active span,
+.blog-grid .post-footer .post-more a,
+.info-box .info-icon i,
+.info-box .info-content a:hover,
+header.header-type-2 .list-inline .dropdown-menu ul li a:hover,
+header.header-type-2 .list-inline .dropdown-menu ul li a.current,
+header.header-type-3 .list-inline .currency-menu ul a.current,
+header.header-type-3 .list-inline .language-menu ul a.current,
+.footer-type-2 .copyright-text a,
+.footer-copyright a,
+.shop-toolbar .product-view-mode ul li a.active,
+.checkout-wrapper .user-actions h3 span,
+.checkout-wrapper .order-summary .product-list .product-final-price,
+.checkout-wrapper .checkout-payment .form-check a,
+.user-dashboard a:not(.btn),
+.login-wrapper .login-form a:hover,
+.login-wrapper .login-form a:focus,
+.comparison-wrapper .table .price strong,
+.wishlist-wrapper .table .price strong,
+.comparison-wrapper .table tr del+span,
+.single-post-wrapper p a,
+.single-post-wrapper .pagination li a:hover,
+.error-wrapper h1,
+.error-wrapper #search-form button:hover,
+.error-wrapper #search-form button:focus,
+.modal .modal-header .close:hover {
+    color: #cc2121;
+}
+
+button:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover,
+.bgc-primary,
+.header-cart button .count-style,
+.header-cart .single-cart-item .product-quantity,
+header .list-inline .dropdown-menu ul li a.current,
+header .list-inline .dropdown-menu ul li a:hover,
+header .list-inline .dropdown-menu ul li a:focus,
+#primary_slider .slide-content .promo-title span,
+.default-btn:hover,
+.default-btn:focus,
+.default-btn.transparent:hover,
+.default-btn.transparent:focus,
+.default-btn.secondary,
+.text-btn::after,
+.btn.btn-secondary:not(:disabled):not(.disabled):active:focus,
+.btn.btn-secondary:hover,
+.btn.btn-secondary:focus,
+.btn.btn-secondary.dark:hover,
+.btn.btn-secondary.dark:focus,
+.swiper-container-horizontal .swiper-pagination-testimonial.swiper-pagination-bullets>span:hover::before,
+.swiper-container-horizontal .swiper-pagination-testimonial.swiper-pagination-bullets>.swiper-pagination-bullet-active::before,
+#primary_slider .swiper-pagination .swiper-pagination-bullet:hover,
+#primary_slider .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active,
+.product-image .label-product.label-sale,
+.product-price>p .price-discount,
+.product-caption .product-name a::after,
+.search-widget input[type="submit"],
+.tags-widget ul li a:hover,
+.list-widget .list-group>a:hover::before,
+.list-widget .list-group>a:focus::before,
+#to_top,
+.custom-checkbox:hover input:checked~.checkmark,
+.custom-checkbox input:checked~.checkmark,
+.custom-radio input[type="radio"]:checked~.checkmark,
+.blog-grid .post-media::before,
+.blog-grid .post-category li a,
+.info-box:hover .info-icon i,
+.faqs-accordion .card-header button[aria-expanded="true"],
+.faqs-accordion .card-header button[aria-expanded="true"]:hover,
+.faqs-accordion .card-header button[aria-expanded="true"]:focus,
+.newsletter-section .newsletter-form-wrapper input[type="submit"],
+.comparison-wrapper .table .btn-danger:hover,
+.comparison-wrapper .table .btn-danger:focus,
+.wishlist-wrapper .table .btn-danger:hover,
+.wishlist-wrapper .table .btn-danger:focus,
+.contact-form-wrapper .btn.btn-secondary,
+.error-wrapper .btn.btn-secondary {
+    background-color: #cc2121;
+}
+
+textarea:focus,
+select:focus,
+input[type="text"]:focus,
+input[type="url"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+.form-control:focus,
+button:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover,
+.border-primary,
+.header-cart button:focus,
+.header-cart button:hover,
+.default-btn.transparent:hover,
+.default-btn.transparent:focus,
+.swiper-container-horizontal .swiper-pagination-testimonial.swiper-pagination-bullets>span:hover,
+.swiper-container-horizontal .swiper-pagination-testimonial.swiper-pagination-bullets>.swiper-pagination-bullet-active,
+.nav.nav-pills .nav-link:hover,
+.nav.nav-pills .nav-link.active,
+.gallery-with-thumbs .nav-slider .swiper-slide:hover,
+.tags-widget ul li a:hover,
+.list-widget .list-group>a:hover::before,
+.list-widget .list-group>a:focus::before,
+#whole .info-box .info-icon i,
+.faqs-accordion .card-header button[aria-expanded="true"],
+.faqs-accordion .card-header button[aria-expanded="true"]:hover,
+.faqs-accordion .card-header button[aria-expanded="true"]:focus,
+.newsletter-section .newsletter-form-wrapper input[type="email"]:active,
+.newsletter-section .newsletter-form-wrapper input[type="email"]:focus,
+.single-product-wrapper .product-review input[type=radio]:hover::after,
+.comparison-wrapper .table .btn-danger:hover,
+.comparison-wrapper .table .btn-danger:focus,
+.wishlist-wrapper .table .btn-danger:hover,
+.wishlist-wrapper .table .btn-danger:focus,
+#whole .single-post-wrapper blockquote,
+.contact-form-wrapper input:not([type="submit"]):focus,
+.contact-form-wrapper textarea:focus,
+.error-wrapper #search-form input[type="search"]:focus {
+    border-color: #cc2121;
+}
+
+
+.header-cart .dropdown-menu .shopping-cart-content {
+    border-top: 2px solid #cc2121;
+}
+header .list-inline .dropdown-menu ul {
+    border-top: 2px solid #cc2121;
+}
+.checkout-wrapper .user-actions h3 {
+    border-top: 3px solid #cc2121;
+}
+header .list-inline .dropdown-menu ul li.active a {
+  background: #cc2121;
+}
+
+.list-widget .list-group > a.active{
+	color:#cc2121
+}
+.list-widget .list-group > a.active::before {
+	background-color: #cc2121;
+	border-color: #cc2121;
+}
+.tags-widget ul li.active a {
+	background-color: #cc2121;
+	border-color: #cc2121;
+}
+.color-widget .color-options li a.active{
+  	color: #cc2121;
+}
+.theme-default-button {
+	background-color: #cc2121;
+}
+
+.price-box__new {
+  color: #cc2121;
+}
+.single-product-wrapper .go-to-wishlist {
+	color: #cc2121;
+}
+
+.white-scheme .default-btn:hover {
+	border-color: #cc2121;
+}
