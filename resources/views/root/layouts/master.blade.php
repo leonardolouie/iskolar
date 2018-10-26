@@ -30,9 +30,16 @@
     <link rel="stylesheet" href="{{asset('assets/pages/waves/css/waves.min.css')}}" type="text/css" media="all">
     <!-- feather icon -->
     <link rel="stylesheet" type="text/css" href="{{asset('assets/icon/feather/css/feather.css')}}">
-    <!-- font-awesome-n -->
+    <!-- font-awesome-n -->    
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/font-awesome-n.min.css')}}">
     <!-- Chartlist chart css -->
+     <!-- themify icon -->
+    <link rel="stylesheet" type="text/css" href="{{asset('files/assets/icon/themify-icons/themify-icons.css')}}">
+    <!-- ico font -->
+    <link rel="stylesheet" type="text/css" href="{{asset('files/assets/icon/icofont/css/icofont.css')}}">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" type="text/css" href="{{asset('files/assets/icon/font-awesome/css/font-awesome.min.css')}}">
+
     <link rel="stylesheet" href="{{asset('bower_components/chartist/css/chartist.css')}}" type="text/css" media="all">
     <!-- Style.css -->
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/style.css')}}">
@@ -71,6 +78,17 @@
     <script src="{{asset('files/assets/pages/chart/float/jquery.flot.categories.js')}}"></script>
     <script src="{{asset('files/assets/pages/chart/float/curvedLines.js')}}"></script>
     <script src="{{asset('files/assets/pages/chart/float/jquery.flot.tooltip.min.js')}}"></script>
+
+    <script src="{{asset('files/bower_components/datatables.net/js/jquery.dataTables.min.js')}}"></script>
+    <script src="{{asset('files/bower_components/datatables.net-buttons/js/dataTables.buttons.min.js')}}"></script>
+    <script src="{{asset('files/assets/pages/data-table/js/jszip.min.js')}}"></script>
+    <script src="{{asset('files/assets/pages/data-table/js/pdfmake.min.js')}}"></script>
+    <script src="{{asset('files/assets/pages/data-table/js/vfs_fonts.js')}}"></script>
+    <script src="{{asset('files/bower_components/datatables.net-buttons/js/buttons.print.min.js')}}"></script>
+    <script src="{{asset('files/bower_components/datatables.net-buttons/js/buttons.html5.min.js')}}"></script>
+    <script src="{{asset('files/bower_components/datatables.net-bs4/js/dataTables.bootstrap4.min.js')}}"></script>
+    <script src="{{asset('files/bower_components/datatables.net-responsive/js/dataTables.responsive.min.js')}}"></script>
+    <script src="{{asset('files/bower_components/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js')}}"></script>
     <!-- Chartlist charts -->
     <script src="{{asset('files/bower_components/chartist/js/chartist.js')}}"></script>
     <!-- amchart js -->

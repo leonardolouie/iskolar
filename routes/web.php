@@ -46,6 +46,7 @@ Route::namespace('Root')->name('root.')->group(function () {
 		Route::prefix('products')->name('products.')->group(function () {
 		Route::get('index', 'ProductsController@index');
 		Route::get('create','ProductsController@create');
+		Route::get('{id}/show', 'ProductsController@show');
 
 
 

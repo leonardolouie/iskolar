@@ -4,8 +4,10 @@
 namespace App\Http\Controllers\Root;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
 use App\Http\Controllers\Controller;
 use App\Product;
+use Image;
 
 class ProductsController extends Controller
 {
@@ -14,7 +16,7 @@ class ProductsController extends Controller
     public function index()
     {
 
-            $result = Product::all();
+        $result = Product::all();
 
     	return view('root.products.index' , compact('result'));
     }
@@ -22,7 +24,6 @@ class ProductsController extends Controller
     public function create()
 
     {
-
 
 
     	return view('root.products.create');
@@ -46,9 +47,13 @@ class ProductsController extends Controller
        
     ]);
 
-  
-    $path=$request->file('image')->store('uploads');
-    $imagepath = $path;
+
+
+
+
+
+
+
 
     $product = new Product;
     $product->product_name = request('product_name');
@@ -60,10 +65,40 @@ class ProductsController extends Controller
     $product->status = request('status');
     $product->color = request('color');
     $product->description = request('description');
-    $product->image =  $imagepath;
+  
+    if($request->hasFile('image'))
+    {
+      $image = $request->file('image');
+      $filename = time(). '.'. $image->getClientOriginalExtension();
+      $location = public_path('uploads/products/'.$filename);
+
+      Image::make($image)->resize(800,400)->save($location);
+
+      $product->image = $filename; 
+     
+
+    }
+
+
     $product->save();
     return redirect('products/index');
 
  
+    }
+
+
+
+    public function show($id)
+    {
+
+     $product = Product::find($id)->get();
+
+
+
+      return view('root.products.show', compact('product'));
+
+
+
+
     }
 }

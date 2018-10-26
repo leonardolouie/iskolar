@@ -5,28 +5,30 @@
 
 @section('content')
 <div class="pcoded-content">
-	<div class="card">
+
 
 
 
 
 
 		@if ($errors->any())
-		<div class="alert alert-danger">
+		  <div class="alert alert-danger border-danger">
+           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <i class="icofont icofont-close-line-circled"></i>
+               </button>
 			<ul>
+				
 				@foreach ($errors->all() as $error)
 				<li>{{ $error }}</li>
 				@endforeach
 			</ul>
 		</div>
+		 
 		@endif
-
+	<div class="card">
 
 		<div class="card-header">
 			<div class="card proj-progress-card">
-				<div class="card-block">
-
-				</div>
 				<form method="POST" action="{{URL::to('products/store')}}" enctype="multipart/form-data" >
 
 					{{csrf_field()}}
@@ -39,12 +41,12 @@
 							<div class="col-sm-5">
 
 								<label class="form-label">Product Name</label>
-								<input type="text" class="form-control" placeholder="Enter Product name" name="product_name" value="{{old('product_name')}}">
+								<input type="text" class="form-control" placeholder="Enter Product name" name="product_name" value="{{old('product_name')}}" required>
 							</div>
 
 							<div class="col-sm-3">
 								<label class="form-label">Quantity</label>
-								<input type="number"  placeholder="Enter Quantity" class="form-control" name="quantity" value="{{old('quantity')}}">
+								<input type="text"  placeholder="Enter Quantity" class="form-control" name="quantity" value="{{old('quantity')}}" required>
 							</div>
 							
 						</div>
@@ -52,11 +54,11 @@
 						<div class="form-group row">
                             <div class="col-sm-3">
 								<label class="form-label">Discount</label>
-								<input type="number" class="form-control"  placeholder="Enter Discount" name="discount" value="{{old('discount')}}">
+								<input type="text" class="form-control"  placeholder="Enter Discount" name="discount" value="{{old('discount')}}">
 							</div>
 							<div class="col-sm-3">
 								<label class="form-label">Price</label>
-								<input type="number" placeholder="Enter Price" class="form-control" name="price" value="{{old('price')}}">
+								<input type="text" placeholder="Enter Price" class="form-control" name="price" value="{{old('price')}}" required>
 							</div>
 
 						</div>
@@ -65,13 +67,11 @@
 
 							<div class="col-sm-3">
 								<label class="form-label">CATEGORY</label>
-								<select class="form-control" name="category" value="{{old('category')}}">
-
-
-									<option value="XS">LANYARD</option>
-									<option value="XS">SHIRT</option>
+								<select class="form-control" name="category" required>
+									<option value="Lanyard">LANYARD</option>
+									<option value="Shirt">SHIRT</option>
 									
-									
+		
 
 								</select>
 							</div>
@@ -82,16 +82,16 @@
 								<select class="form-control" name="color" value="{{old('color')}}">
                       
 									<option value="0">None</option>
-									<option value="XS">White</option>
-									<option value="XS">Black</option>
-									<option value="XS">Yellow</option>
-									<option value="XS">Red</option>
-									<option value="XS">Maroon</option>
-									<option value="XS">Green</option>
-									<option value="XS">Violet</option>
-									<option value="XS">Pink</option>
-									<option value="XS">Orange</option>
-									<option value="XS">Blue</option>
+									<option value="White">White</option>
+									<option value="Black">Black</option>
+									<option value="Yellow">Yellow</option>
+									<option value="Red">Red</option>
+									<option value="Maroon">Maroon</option>
+									<option value="Green">Green</option>
+									<option value="Violet">Violet</option>
+									<option value="Pink">Pink</option>
+									<option value="Orange">Orange</option>
+									<option value="Blue">Blue</option>
 
 								</select>
 							</div>
@@ -105,17 +105,14 @@
 
 								<label class="form-label">SIZE</label>
 								<select class="form-control" name="size" value="{{old('size')}}">
-
 									<option value="0">NONE</option>
 									<option value="XS">XS</option>
-									<option value="XS">S</option>
-									<option value="XS">M</option>
-									<option value="XS">L</option>
-									<option value="XS">XL</option>
-									<option value="XS">XXL</option>
-									<option value="XS">XXXL</option>
-									
-
+									<option value="S">S</option>
+									<option value="M">M</option>
+									<option value="L">L</option>
+									<option value="XL">XL</option>
+									<option value="XXL">XXL</option>
+									<option value="XXXL">XXXL</option>
 								</select>
 								
 							</div>
@@ -132,7 +129,7 @@
 						<div class="form-group row">
 							<label class="col-sm-2 col-form-label">Image</label>
 							<div class="col-sm-5">
-								<input type="file" class="form-control" accept="image/*" name="image">
+								<input type="file" class="form-control" accept="image/*" name="image" required>
 							</div>
 						</div>
 						<div class="form-group row">
@@ -149,20 +146,14 @@
 					    </div>
 					</div>
 
-
-
-
-
-					
-
-
 					</form>
 				</div>
-
+               </div>
 			</div>
 		</div>
 	</div>
 </div>
+
 
 				
 		
