@@ -6,22 +6,35 @@
 @section('content')
     <div class="contact-area d-flex align-items-center">
 
-        <div class="google-map">
-            <div id="googleMap"></div>
-        </div>
+       <div class="row">
+        
+         <div class="col-md-8">
 
         <div class="contact-info">
-            <h2>How to Find Us</h2>
-            <p>Mauris viverra cursus ante laoreet eleifend. Donec vel fringilla ante. Aenean finibus velit id urna vehicula, nec maximus est sollicitudin.</p>
+          
+            <h2>About Us</h2>
+            <p>Iskolar Creatives is a Clothing Line for Iskolar ng Bayan. We also do section shirts, and any school shirts.
+                <br>
+                Iskolar Creatives is founded by two PUP Santa Maria Bulacan graduates. It started with creative minds and undying passion of these two in Tshirt designs. They started customizing shirts for section and campus.
+                Today, Iskolar Creatives also offers Lanyards, Pins, Bagtags and other merchandises for schools.
 
-            <div class="contact-address mt-50">
-                <p><span>address:</span> 10 Suffolk st Soho, London, UK</p>
-                <p><span>telephone:</span> +12 34 567 890</p>
-                <p><a href="https://colorlib.com/cdn-cgi/l/email-protection#01626e6f7560627541647272646f62642f626e6c"><span class="__cf_email__" data-cfemail="22414d4c5643415662475151474c41470c414d4f">[email&#160;protected]</span></a></p>
+            </p>
+              </div>
+       </div>
+       
+        <div class="col-md-3"> 
+            
+            <div class="contact-address ">
+                <h2>Contact Us</h2>
+                <p><span>address:</span> PUP Sintang Paaralan</p>
+                <p><span>telephone:</span> Call 0926 594 5627</p>
+                <p><span>messenger</span> m.me/iskolarcreatives</p>
             </div>
         </div>
 
+  
     </div>
+</div>
 
 
 @endsection

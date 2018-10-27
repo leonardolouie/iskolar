@@ -20,7 +20,7 @@ Route::namespace('Front')->name('front.')->group(function () {
 
 Route::get('welcome', 'LandingPageController@index');
 Route::get('shop', 'LandingPageController@shop');
-Route::get('{id}/details', 'LandingPageController@details');
+Route::get('{id}/details', 'LandingPageController@productdetails');
 
 
 //for blog

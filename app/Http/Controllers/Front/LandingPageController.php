@@ -49,4 +49,20 @@ class LandingPageController extends Controller
 
      	return view('front.pages.contact');
     }
+
+
+    public function productdetails($id)
+
+    {
+
+      $product = Product::where('id', $id)->get();
+
+
+      return view('front.pages.product_details',compact('product'));
+
+         
+
+    }
+
+
 }

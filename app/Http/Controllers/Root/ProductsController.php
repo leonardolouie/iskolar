@@ -91,7 +91,7 @@ class ProductsController extends Controller
     public function show($id)
     {
 
-     $product = Product::find($id)->get();
+     $product = Product::where('id', $id)->get();
 
 
 

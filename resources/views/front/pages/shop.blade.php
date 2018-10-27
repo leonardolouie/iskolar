@@ -122,7 +122,7 @@
                                     <!-- Product Description -->
                                     <div class="product-description">
                                        
-                                        <a href="#">
+                                        <a href="{{URL::to($product->id.'/details')}}">
                                         <span>{{$product->description}}</span>
                                             <h6>{{$product->product_name}}</h6>
                                         </a>
