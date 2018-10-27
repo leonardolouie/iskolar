@@ -18,7 +18,16 @@
 
 Route::namespace('Front')->name('front.')->group(function () {
 
-Route::get('homeekoto', 'LandingPageController@index');
+Route::get('welcome', 'LandingPageController@index');
+Route::get('shop', 'LandingPageController@shop');
+Route::get('{id}/details', 'LandingPageController@details');
+
+
+//for blog
+Route::get('blog' , 'LandingPageController@blog');
+Route::get('{$id}/blog' , 'LandingPageController@blogdetails');
+
+Route::get('contact' , 'LandingPageController@contact');
 
 
 });

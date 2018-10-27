@@ -1,94 +1,91 @@
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+  @extends('front.layouts.master')
 
-        <title>Laravel Ecommerce Example</title>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Montserrat%7CRoboto:300,400,700" rel="stylesheet">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-        <!-- Styles -->
-        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
+  @section('content')
 
-    </head>
-    <body>
-        <div id="app">
-            <header class="with-background">
-                <div class="top-nav container">
-                    <div class="top-nav-left">
-                        <div class="logo">Ecommerce</div>
-                       
-                    </div>
-                    <div class="top-nav-right">
+  <!-- ##### Welcome Area Start ##### -->
+    <section class="welcome_area bg-img background-overlay" style="background-image: url({{asset('ISKOLAR/42244852_737605536580626_1822135554590900224_o.jpg')}});">
+
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12">
+                    <div class="hero-content">
                         
+                          <h1 style="color: white;text-align: center" > ISKOLAR CREATIVES </h1>
+                        <a href="{{URL::to('shop')}}" class="btn essence-btn">SHOP NOW</a>
                     </div>
-                </div> <!-- end top-nav -->
-                <div class="hero container">
-                    <div class="hero-copy">
-                        <h1>Laravel Ecommerce Demo</h1>
-                        <p>Includes multiple products, categories, a shopping cart and a checkout system with Stripe integration.</p>
-                        <div class="hero-buttons">
-                            <a href="https://www.youtube.com/playlist?list=PLEhEHUEU3x5oPTli631ZX9cxl6cU_sDaR" class="button button-white">Screencasts</a>
-                            <a href="https://github.com/drehimself/laravel-ecommerce-example" class="button button-white">GitHub</a>
-                        </div>
-                    </div> <!-- end hero-copy -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ##### Welcome Area End ##### -->
 
-                    <div class="hero-image">
-                        <img src="img/macbook-pro-laravel.png" alt="hero image">
-                    </div> <!-- end hero-image -->
-                </div> <!-- end hero -->
-            </header>
 
-            <div class="featured-section">
+   
 
-                <div class="container">
-                    <h1 class="text-center">Laravel Ecommerce</h1>
-
-                    <p class="section-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore vitae nisi, consequuntur illum dolores cumque pariatur quis provident deleniti nesciunt officia est reprehenderit sunt aliquid possimus temporibus enim eum hic lorem.</p>
-
-                    <div class="text-center button-container">
-                        <a href="#" class="button">Featured</a>
-                        <a href="#" class="button">On Sale</a>
+    <!-- ##### New Arrivals Area Start ##### -->
+    <section class="new_arrivals_area section-padding-80 clearfix">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-heading text-center">
+                        <h2>Products</h2>
                     </div>
+                </div>
+            </div>
+        </div>
 
-                    <div class="tabs">
-                        <div class="tab">
-                            Featured
-                        </div>
-                        <div class="tab">
-                            On Sale
-                        </div>
-                    </div> 
 
-                    <div class="products text-center">
-                        @foreach ($products as $product)
-                            <div class="product">
-                                <a href="#">><img class="img-responsive" src="{{asset('uploads/products/'.$product->image)}}" alt="{{$product->product_name}}"</a>
-                                <a href="#"><div class="product-name">{{ $product->product_name }}</div></a>
-                                <div class="product-price">{{ $product->price }}</div>
+        <div class="container">
+            
+                        <div class="row">
+
+                            <!-- Single Product -->
+
+                            @foreach($products as $product)
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <div class="single-product-wrapper">
+                                    <!-- Product Image -->
+                                    <div class="product-img">
+                                        <img src="{{asset('uploads/products/'.$product->image)}}" alt="" style="height: 250px">
+                                        <!-- Hover Thumb -->
+                                        <img class="hover-img" src="{{asset('uploads/products/'.$product->image)}}" alt="">
+
+                                        <!-- Product Badge -->
+                                        <div class="product-badge offer-badge">
+                                            <span>-{{$product->discount}}</span>
+                                        </div>
+    
+                                    </div>
+
+                                    <!-- Product Description -->
+                                    <div class="product-description">
+                                       
+                                        <a href="#">
+                                        <span>{{$product->description}}</span>
+                                            <h6>{{$product->product_name}}</h6>
+                                        </a>
+                                        <p class="product-price">P{{$product->price}}</p>
+                                         <b>Quantity: <small>{{$product->quantity}} </small></b>
+
+                                        <!-- Hover Content -->
+                                        <div class="hover-content">
+                                            <!-- Add to Cart -->
+                                            <div class="add-to-cart-btn">
+                                                <a href="#" class="btn essence-btn btnAdd">Add to Cart</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        @endforeach
 
-                    </div> <!-- end products -->
+                         @endforeach
+                        </div>
+        </div>
 
-                    <div class="text-center button-container">
-                        <a href="#" class="button">View more products</a>
-                    </div>
+    
+    </section>
+    <!-- ##### New Arrivals Area End ##### -->
 
-                </div> <!-- end container -->
-
-            </div> <!-- end featured-section -->
-
-            <blog-posts></blog-posts>
-
-          
-
-        </div> <!-- end #app -->
-        <script src="{{asset('js/app.js')}}"></script>
-    </body>
-</html>
+    @endsection

@@ -1,61 +1,134 @@
-<!-- Top Header Bar -->
-<header class="top-header-bar-container">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <ul class="top-header-bar">
-      
-           <!-- Cart -->
-            <li class="top-cart">
-              <a href="cart/index.html"><i class="fa fa-shopping-cart"></i> My Cart               - &#036; <span class="price">0</span>             </a>
-            </li> <!-- / Cart -->
-          
-                      <!-- Account -->
-            <li class="top-account">
-              <a href="my-account/index.html"><i class="fa fa-user"></i> Account              </a>
-            </li><!-- / Account -->
-          
-                                          <!-- Top Search -->
-            <li class="top-search">
-              <!-- Search Form -->
-              <form role="search" method="get" class="pull-right" id="searchform_topbar" action="https://colorlib.com/tyche/">
-                <label>
-                  <span class="screen-reader-text"></span>
-                  <input class="search-field-top-bar" id="search-field-top-bar" placeholder="Search ..." value="" name="s" type="search">
-                </label>
-                <button id="search-top-bar-submit" type="submit" class="search-top-bar-submit">
-                  <span class="fa fa-search"></span>
-                </button>
-              </form>
-            </li><!-- / Top Search -->
-                  </ul>
-      </div>
-    </div>
-  </div>
-</header><!-- /Top Header Bar -->
-  <header id="masthead" class="site-header" role="banner">
-    <div class="site-branding container">
-      <div class="row">
-        <div class="col-sm-4 header-logo">
-          <a href="index.html" class="custom-logo-link" rel="home" itemprop="url"><img width="150" height="70" src="wp-content/uploads/sites/17/2017/06/logo.png" class="custom-logo" alt="Tyche Demo" itemprop="logo" srcset="https://colorlib.com/tyche/wp-content/uploads/sites/17/2017/06/logo.png 150w, https://colorlib.com/tyche/wp-content/uploads/sites/17/2017/06/logo-65x30.png 65w" sizes="(max-width: 150px) 100vw, 150px" /></a>        </div>
+ <!-- ##### Header Area Start ##### -->
+    <header class="header_area">
+        <div class="classy-nav-container breakpoint-off d-flex align-items-center justify-content-between">
+            <!-- Classy Menu -->
+            <nav class="classy-navbar" id="essenceNav">
+                <!-- Logo -->
+                <a class="nav-brand" href="{{URL::to('welcome')}}"><h6>ISKOLAR CREATIVES <h6></a>
+                <!-- Navbar Toggler -->
+                <div class="classy-navbar-toggler">
+                    <span class="navbarToggler"><span></span><span></span><span></span></span>
+                </div>
+                <!-- Menu -->
+                <div class="classy-menu">
+                    <!-- close btn -->
+                    <div class="classycloseIcon">
+                        <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                    </div>
+                    <!-- Nav Start -->
+                    <div class="classynav">
+                        <ul>
+                            <li><a href="{{URL::to('shop')}}">Shop</a> </li>
+                            <li><a href="{{URL::to('blog')}}">Blog</a></li>
+                            <li><a href="{{URL::to('contact')}}">Contact</a></li>
+                        </ul>
+                    </div>
+                    <!-- Nav End -->
+                </div>
+            </nav>
 
-              </div>
-    </div><!-- .site-branding -->
+            <!-- Header Meta Data -->
+            <div class="header-meta d-flex clearfix justify-content-end">
+    
+                <!-- Favourite Area -->
+                <div class="favourite-area">
+                    <a href="#"><img src="img/core-img/heart.svg" alt=""></a>
+                </div>
+                <!-- User Login Info -->
+                <div class="user-login-info">
+                    <a href="#"><img src="img/core-img/user.svg" alt=""></a>
+                </div>
+                <!-- Cart Area -->
+                <div class="cart-area">
+                    <a href="#" id="essenceCartBtn"><img src="{{asset('front/img/core-img/bag.svg')}}" alt=""> <span>3</span></a>
+                </div>
+            </div>
 
-    <nav id="site-navigation" class="main-navigation" role="navigation">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <ul id="desktop-menu" class="sf-menu"><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-83" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-83 active"><a title="Home" href="https://colorlib.com/tyche">Home</a></li>
-<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-86" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-86"><a title="Shop" href="shop/index.html">Shop</a></li>
-<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-84" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-84"><a title="Blog" href="blog/index.html">Blog</a></li>
-<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-85" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-85"><a title="Contact" href="contact/index.html">Contact</a></li>
-</ul>           <!-- /// Mobile Menu Trigger //////// -->
-            <a href="#" id="mobile-menu-trigger"> <i class="fa fa-bars"></i> </a>
-            <!-- end #mobile-menu-trigger -->
-          </div>
         </div>
-      </div>
-    </nav><!-- #site-navigation -->
+    </header>
+    <!-- ##### Header Area End ##### -->
 
-  </header><!-- #masthead -->
+    <!-- ##### Right Side Cart Area ##### -->
+    <div class="cart-bg-overlay"></div>
+
+    <div class="right-side-cart-area">
+
+        <!-- Cart Button -->
+        <div class="cart-button">
+            <a href="#" id="rightSideCart"><img src="img/core-img/bag.svg" alt=""> <span>3</span></a>
+        </div>
+
+        <div class="cart-content d-flex">
+
+            <!-- Cart List Area -->
+            <div class="cart-list">
+                <!-- Single Cart Item -->
+                <div class="single-cart-item">
+                    <a href="#" class="product-image">
+                        <img src="img/product-img/product-1.jpg" class="cart-thumb" alt="">
+                        <!-- Cart Item Desc -->
+                        <div class="cart-item-desc">
+                          <span class="product-remove"><i class="fa fa-close" aria-hidden="true"></i></span>
+                            <span class="badge">Mango</span>
+                            <h6>Button Through Strap Mini Dress</h6>
+                            <p class="size">Size: S</p>
+                            <p class="color">Color: Red</p>
+                            <p class="price">$45.00</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Single Cart Item -->
+                <div class="single-cart-item">
+                    <a href="#" class="product-image">
+                        <img src="img/product-img/product-2.jpg" class="cart-thumb" alt="">
+                        <!-- Cart Item Desc -->
+                        <div class="cart-item-desc">
+                          <span class="product-remove"><i class="fa fa-close" aria-hidden="true"></i></span>
+                            <span class="badge">Mango</span>
+                            <h6>Button Through Strap Mini Dress</h6>
+                            <p class="size">Size: S</p>
+                            <p class="color">Color: Red</p>
+                            <p class="price">$45.00</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Single Cart Item -->
+                <div class="single-cart-item">
+                    <a href="#" class="product-image">
+                        <img src="img/product-img/product-3.jpg" class="cart-thumb" alt="">
+                        <!-- Cart Item Desc -->
+                        <div class="cart-item-desc">
+                          <span class="product-remove"><i class="fa fa-close" aria-hidden="true"></i></span>
+                            <span class="badge">Mango</span>
+                            <h6>Button Through Strap Mini Dress</h6>
+                            <p class="size">Size: S</p>
+                            <p class="color">Color: Red</p>
+                            <p class="price">$45.00</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Cart Summary -->
+            <div class="cart-amount-summary">
+
+                <h2>Summary</h2>
+                <ul class="summary-table">
+                    <li><span>subtotal:</span> <span>$274.00</span></li>
+                    <li><span>delivery:</span> <span>Free</span></li>
+                    <li><span>discount:</span> <span>-15%</span></li>
+                    <li><span>total:</span> <span>$232.00</span></li>
+                </ul>
+                <div class="checkout-btn mt-100">
+                    <a href="checkout.html" class="btn essence-btn">check out</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- ##### Right Side Cart End ##### -->

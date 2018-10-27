@@ -18,4 +18,35 @@ class LandingPageController extends Controller
        
     	return view('front.pages.landingpage', compact('products'));
     }
+
+
+
+    public function shop()
+    {
+
+        $products = Product::where('status', 1)->get();
+        $count = Product::where('status', 1)->count();
+     	return view('front.pages.shop', compact('products' , 'count'));
+
+    } 
+
+
+
+    public function blog()
+    {
+
+
+
+    	return view('front.pages.blog');
+    }
+
+    public function contact()
+
+
+    {
+
+
+
+     	return view('front.pages.contact');
+    }
 }
