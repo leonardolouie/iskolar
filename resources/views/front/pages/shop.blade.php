@@ -23,6 +23,20 @@
     <!-- ##### Breadcumb Area End ##### -->
 
     <!-- ##### Shop Grid Area Start ##### -->
+
+
+        @if (session()->has('sucess_message'))
+         
+            <script>
+                
+              alert(Sucess);
+            </script> 
+           
+     
+        @endif
+
+
+
     <section class="shop_grid_area section-padding-80">
         <div class="container">
             <div class="row">
@@ -81,7 +95,7 @@
                                     <!-- Total Products -->
                                     <div class="total-products">
 
-                                        <p><span></span>{{$count}} products found</p>
+                                        <p><span></span>{{$count}} product(s) found</p>
                                     </div>
                                     <!-- Sorting -->
                                     <div class="product-sorting d-flex">
@@ -102,8 +116,14 @@
                         <div class="row">
 
                             <!-- Single Product -->
+                            <table>
+                                
+                         
 
                             @foreach($products as $product)
+
+                            <form action="{{URL::to('addtocart')}}" method="POST">
+                                {{csrf_field()}}
                             <div class="col-12 col-sm-6 col-lg-4">
                                 <div class="single-product-wrapper">
                                     <!-- Product Image -->
@@ -114,7 +134,7 @@
 
                                         <!-- Product Badge -->
                                         <div class="product-badge offer-badge">
-                                            <span>-{{$product->discount}}</span>
+                                            <span>Discount: -{{$product->discount}}</span>
                                         </div>
     
                                     </div>
@@ -126,21 +146,27 @@
                                         <span>{{$product->description}}</span>
                                             <h6>{{$product->product_name}}</h6>
                                         </a>
-                                        <p class="product-price">P{{$product->price}}</p>
+                                        <h5 style="color:red">P{{$product->price}}</h5>
                                          <b>Quantity: <small>{{$product->quantity}} </small></b>
+                                         <br>
+                                         <label for="last_name">Enter Quantity</label>
+                                         <input type="number" name="quantity" required>
+                                         <input type="hidden" name="id"  value="{{$product->id}}">
+
 
                                         <!-- Hover Content -->
                                         <div class="hover-content">
                                             <!-- Add to Cart -->
                                             <div class="add-to-cart-btn">
-                                                <a href="#" class="btn essence-btn btn_add_cart" id="{{$product->id}}">Add to Cart</a>
+                                                <button type="submit" class="btn essence-btn btn_add_cart"> ADD TO CART</button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
+                        </form>
                          @endforeach
+                          </table>
                         </div>
                     </div>
                   

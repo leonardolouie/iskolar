@@ -46,7 +46,7 @@
                                      
                                      </a>
                                     
-                                     <a href="{{$result->id}}/deactivate" data-toggle="tooltip" title="deactivate">
+                                     <a href="{{$result->id}}/activate" data-toggle="tooltip" title="deactivate">
                                      <i class="fa fa-lock"></i>
                                     
                                      </a>

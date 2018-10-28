@@ -64,12 +64,12 @@
      
         $(document).on('click', '.btn_add_cart', function(){
         
-            var prod_id = $(this).attr("id");
+            //var prod_id = $(this).attr("id");
          // var prod_name = $('#name'+prod_id+'').val();
          // var prod_price = $('#price'+prod_id+'').val();
          // var prod_quan = $('#quantity'+prod_id).val();
          // var action = "add";
-                alert(prod_id);
+                alert(ADDED VALUE);
              
             });
 

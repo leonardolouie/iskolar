@@ -47,6 +47,11 @@ Route::get('shop', 'LandingPageController@shop');
 Route::get('{id}/details', 'LandingPageController@productdetails');
 
 
+Route::get('checkout', 'CartController@checkout')->name('checkout');
+Route::post('addtocart' , 'CartController@store');
+Route::get('clearcart', 'CartController@clearcart')->name('clear');
+
+
 //for blog
 Route::get('blog' , 'LandingPageController@blog');
 Route::get('{$id}/blog' , 'LandingPageController@blogdetails');
@@ -80,6 +85,7 @@ Route::namespace('Root')->name('root.')->group(function () {
 		Route::get('index', 'ProductsController@index');
 		Route::get('create','ProductsController@create');
 		Route::get('{id}/show', 'ProductsController@show');
+        Route::get('{id}/activate', 'ProductsController@activate');
 
 
 

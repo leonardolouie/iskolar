@@ -61,7 +61,7 @@ class ProductsController extends Controller
     $product->quantity = request('quantity');
     $product->price = request('price');
     $product->category = request('category');
-    $product->discount = request('size');
+    $product->discount = request('discount');
     $product->status = request('status');
     $product->color = request('color');
     $product->description = request('description');
@@ -100,5 +100,32 @@ class ProductsController extends Controller
 
 
 
+    }
+
+
+
+    public function activate($id)
+    {
+            $products = Product::where('id', $id)->get();
+
+        foreach($products as $products)
+        {
+           if( $products->status == 0 || $products->status == '')
+           {
+
+              $product = Product::where('id', $id)->update(['status' => '1']);
+
+
+           }
+
+           else{
+
+
+              $product = Product::where('id', $id)->update(['status' => '0']);
+           }
+       }
+          
+
+         return redirect()->back();
     }
 }
