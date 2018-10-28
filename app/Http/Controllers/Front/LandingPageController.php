@@ -24,7 +24,7 @@ class LandingPageController extends Controller
     public function shop()
     {
 
-        $products = Product::where('status', 1)->get();
+        $products = Product::where('status', 1)->inRandomOrder()->get();
         $count = Product::where('status', 1)->count();
      	return view('front.pages.shop', compact('products' , 'count'));
 
