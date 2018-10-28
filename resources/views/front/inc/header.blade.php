@@ -30,13 +30,10 @@
             <!-- Header Meta Data -->
             <div class="header-meta d-flex clearfix justify-content-end">
     
-                <!-- Favourite Area -->
-                <div class="favourite-area">
-                    <a href="#"><img src="img/core-img/heart.svg" alt=""></a>
-                </div>
+              
                 <!-- User Login Info -->
                 <div class="user-login-info">
-                    <a href="#"><img src="img/core-img/user.svg" alt=""></a>
+                    <a href="{{route('login')}}"><img src="{{asset ('front/img/core-img/user.svg')}}" alt=""></a>
                 </div>
                 <!-- Cart Area -->
                 <div class="cart-area">

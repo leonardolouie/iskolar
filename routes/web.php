@@ -16,6 +16,30 @@
 //Route::get('/home', 'HomeController@index')->name('home');
 
 
+
+Route::namespace('Auth')->group(function (){
+
+        
+      
+
+            
+    Route::get('/login', 'LoginController@showLoginForm')->name('login');
+    Route::post('/login', 'LoginController@login');
+    
+    Route::post('/password/email', 'ForgotPasswordController@sendResetLinkEmail')->name('password.email');
+    Route::get('/password/reset' , 'ForgotPasswordController@showLinkRequestForm')->name('password.request');
+    Route::post('/password/reset', 'ResetPasswordController@reset');
+    Route::get('/password/reset/{token}', 'ResetPasswordController@shoWResetForm')->name('password.reset');
+
+   
+
+    Route::get('/register','RegisterController@showRegisterForm')->name('register');
+    Route::post('/register', 'RegisterController@store');
+    Route::any('/logout','LoginController@logout')->name('logout');
+    	});
+
+
+
 Route::namespace('Front')->name('front.')->group(function () {
 
 Route::get('welcome', 'LandingPageController@index');

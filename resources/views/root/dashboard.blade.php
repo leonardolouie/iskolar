@@ -5,7 +5,7 @@
 
 @section('content')
 
-
+@include('sweet::alert') 
  <div class="pcoded-content">
                         <!-- [ breadcrumb ] start -->
                         <div class="page-header card">
