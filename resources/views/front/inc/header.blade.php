@@ -68,7 +68,7 @@
                         <!-- Cart Item Desc -->
                         <div class="cart-item-desc">
                           <span class="product-remove"><i class="fa fa-close" aria-hidden="true"></i></span>
-                            <span class="badge">$collection->1</span>
+                            <span class="badge">{{Cart::getContent()}}</span>
                             <h6>Button Through Strap Mini Dress</h6>
                             <p class="size">Size: S</p>
                             <p class="color">Color: Red</p>
@@ -76,20 +76,25 @@
                         </div>
                     </a>
                 </div>
+
+
            
             @endforeach
              </div>
+                         {{Cart::getContent()}}
               <!-- Cart Summary -->
 
                  <div class="cart-amount-summary">
 
-                <h2>Summary</h2>
+                <h2>Cart Summary</h2>
                 <ul class="summary-table">
-                    <li><span>discount:</span> <span>-P{{ Cart::getCondition('discount')}}</span></li>
-                    <li><span>subtotal:</span> <span>{{Cart::getSubTotal()}}</span></li>
-                    <li><span>delivery:</span> <span>+P50</span></li>
+                    <li><span>Total Quantity:</span> <span>{{Cart::getTotalQuantity()}}</span></li>
+                    <li><span>Discount:</span> <span>-P{{ Cart::getCondition('discount')}}</span></li>
+                    <li><span>Subtotal:</span> <span>{{Cart::getSubTotal()}}</span></li>
+                    <li><span>Delivery:</span> <span>+P50</span></li>
              
-                    <li><span>total:</span> <span>{{Cart::getTotal() + 50}}</span></li>
+        
+                    <li><span>Total:</span> <span>{{Cart::getTotal() + 50}}</span></li>
 
 
 

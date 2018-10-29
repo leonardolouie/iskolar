@@ -7,6 +7,9 @@ use App\Http\Controllers\Controller;
 use App\Product;
 use Cart;
 use Redirect;
+use App\Shopper;
+use App\Order;
+use Illuminate\Support\Str;
 
 class CartController extends Controller
 {
@@ -37,7 +40,7 @@ class CartController extends Controller
     'name' => $product->product_name,
     'price' => $product->price,
     'quantity' => request('quantity'),
-     'image' => $product->image,
+    'link_image' => $product->image,
     'attributes' => array(),
     'conditions' => [$itemCondition2]
 		));
@@ -59,8 +62,7 @@ class CartController extends Controller
 
 
 
-
-        return view('front.pages.checkout');
+          return view('front.pages.checkout');
     }
 
     public function clearcart()
@@ -68,11 +70,63 @@ class CartController extends Controller
 
 
 
+         
            Cart::clear();
            return Redirect::back()->with('sucess_message', 'Successfully Clear Cart');
 
 
     }
+      
+      public function saveorder()
+      {
+
+
+
+      	  $shopper = new Shopper;
+
+
+      	   $shopper->first_name = request('first_name');
+      	   $shopper->middle_name = request('middle_name');
+      	   $shopper->last_name = request('last_name');
+      	   $shopper->email = request('email');
+      	   $shopper->postal_code = request('postal_code');
+      	   $shopper->country = request('country');
+      	   $shopper->town = request('town');
+      	   $shopper->province = request('province');
+      	   $shopper->status = request('status');
+      	   $shopper->contact_number = request('contact_no');
+      	   $shopper->address = request('address');
+
+      	   $shopper->save();
+
+      	   $order = new order();
+
+      	   $order->code_order = Str::random(8);
+      	   $order->shopper_id = 1;
+      	   $order->total = request('total');
+      	   $order->subtotal = request('subtotal');
+      	   $order->discount = request('discount');
+      	   $order->delivery_type = request('delivery_type');
+      	   $order->payment = 'cash on delivery';
+      	   $order->transac_status = 'ok';
+      	   $order->save();
+      	   Cart::clear();
+
+
+     
+        return redirect('thankyou');
+      }
+      
+
+      public function thankyou()
+      {
+
+
+
+
+
+      	return view('front.pages.thankyou');
+      }
 
   
 

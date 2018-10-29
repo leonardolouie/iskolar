@@ -42,21 +42,26 @@ Route::namespace('Auth')->group(function (){
 
 Route::namespace('Front')->name('front.')->group(function () {
 
-Route::get('welcome', 'LandingPageController@index');
-Route::get('shop', 'LandingPageController@shop');
-Route::get('{id}/details', 'LandingPageController@productdetails');
+    Route::get('welcome', 'LandingPageController@index');
+    Route::get('shop', 'LandingPageController@shop');
+    Route::get('{id}/details', 'LandingPageController@productdetails');
 
 
-Route::get('checkout', 'CartController@checkout')->name('checkout');
-Route::post('addtocart' , 'CartController@store');
-Route::get('clearcart', 'CartController@clearcart')->name('clear');
+    Route::get('checkout', 'CartController@checkout')->name('checkout');
+    Route::post('addtocart' , 'CartController@store');
+    Route::get('clearcart', 'CartController@clearcart')->name('clear');
 
 
-//for blog
-Route::get('blog' , 'LandingPageController@blog');
-Route::get('{$id}/blog' , 'LandingPageController@blogdetails');
+    Route::post('checkoutsave', 'CartController@saveorder');
+    Route::get('thankyou', 'CartController@thankyou');
 
-Route::get('contact' , 'LandingPageController@contact');
+
+
+    //for blog
+    Route::get('blog' , 'LandingPageController@blog');
+    Route::get('{$id}/blog' , 'LandingPageController@blogdetails');
+
+    Route::get('contact' , 'LandingPageController@contact');
 
 
 });
@@ -93,6 +98,13 @@ Route::namespace('Root')->name('root.')->group(function () {
 		Route::POST('store', 'ProductsController@store')->name('store');
 
 		});
+
+
+        Route::prefix('orders')->name('orders.')->group(function () {
+        Route::get('index', 'OrderController@index');
+      
+
+        });
 
 
 		
