@@ -24,7 +24,7 @@
                 <!-- Single Blog Area -->
                 <div class="col-12 col-lg-6">
                     <div class="single-blog-area mb-50">
-                        <img src="img/bg-img/blog1.jpg" alt="">
+                        <img src="{{asset('ISKOLAR/2.jpg')}}" alt="">
                         <!-- Post Title -->
                         <div class="post-title">
                             <a href="#">Vivamus sed nunc in arcu cursus mollis quis et orci. Interdum et malesuada</a>
@@ -44,7 +44,7 @@
                 <!-- Single Blog Area -->
                 <div class="col-12 col-lg-6">
                     <div class="single-blog-area mb-50">
-                        <img src="img/bg-img/blog2.jpg" alt="">
+                         <img src="{{asset('ISKOLAR/2.jpg')}}" alt="">
                         <!-- Post Title -->
                         <div class="post-title">
                             <a href="#">Vivamus sed nunc in arcu cursus mollis quis et orci. Interdum et malesuada</a>
@@ -64,7 +64,7 @@
                 <!-- Single Blog Area -->
                 <div class="col-12 col-lg-6">
                     <div class="single-blog-area mb-50">
-                        <img src="img/bg-img/blog3.jpg" alt="">
+                        <img src="{{asset('ISKOLAR/2.jpg')}}" alt="">
                         <!-- Post Title -->
                         <div class="post-title">
                             <a href="#">Vivamus sed nunc in arcu cursus mollis quis et orci. Interdum et malesuada</a>
@@ -84,7 +84,7 @@
                 <!-- Single Blog Area -->
                 <div class="col-12 col-lg-6">
                     <div class="single-blog-area mb-50">
-                        <img src="img/bg-img/blog4.jpg" alt="">
+                        <img src="{{asset('ISKOLAR/2.jpg')}}" alt="">
                         <!-- Post Title -->
                         <div class="post-title">
                             <a href="#">Vivamus sed nunc in arcu cursus mollis quis et orci. Interdum et malesuada</a>
@@ -104,7 +104,7 @@
                 <!-- Single Blog Area -->
                 <div class="col-12 col-lg-6">
                     <div class="single-blog-area mb-50">
-                        <img src="img/bg-img/blog5.jpg" alt="">
+                        <img src="{{asset('ISKOLAR/2.jpg')}}" alt="">
                         <!-- Post Title -->
                         <div class="post-title">
                             <a href="#">Vivamus sed nunc in arcu cursus mollis quis et orci. Interdum et malesuada</a>
@@ -124,7 +124,7 @@
                 <!-- Single Blog Area -->
                 <div class="col-12 col-lg-6">
                     <div class="single-blog-area mb-50">
-                        <img src="img/bg-img/blog6.jpg" alt="">
+                        <img src="{{asset('ISKOLAR/2.jpg')}}" alt="">
                         <!-- Post Title -->
                         <div class="post-title">
                             <a href="#">Vivamus sed nunc in arcu cursus mollis quis et orci. Interdum et malesuada</a>

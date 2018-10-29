@@ -61,27 +61,40 @@
             <div class="cart-list">
                 <!-- Single Cart Item -->
 
-                 @foreach(Cart::getContent() as $collection)
+                 @foreach($items = Cart::getContent() as $collection)
+                 <form action="{{URL::to($collection->id.'/remove')}}" method="post">
+                    {{csrf_field()}}
+                       
                 <div class="single-cart-item">
                     <a href="#" class="product-image">
-                        <img src="{{asset('uploads/products/1.jpg')}}" class="cart-thumb" alt="">
+                        <img src="{{asset('ISKOLAR/2.jpg')}}" class="cart-thumb" alt="">
                         <!-- Cart Item Desc -->
                         <div class="cart-item-desc">
-                          <span class="product-remove"><i class="fa fa-close" aria-hidden="true"></i></span>
-                            <span class="badge">{{Cart::getContent()}}</span>
-                            <h6>Button Through Strap Mini Dress</h6>
-                            <p class="size">Size: S</p>
-                            <p class="color">Color: Red</p>
-                            <p class="price">$45.00</p>
+                               
+                   
+                                
+                                 
+                            
+                           
+                            <span class="badge">{{$collection->name}}</span>
+                        
+                           
+                            <p class="Price"><span> Quantity:</span>{{$collection->quantity}}</p>
+                            <p class="price"><span> Price:</span>{{$collection->price}}</p>
+
+                           
                         </div>
                     </a>
                 </div>
 
+                   <button type="submit" class="btn essence-btn">Remove</button>
+             </form>
+                         
 
            
             @endforeach
              </div>
-                         {{Cart::getContent()}}
+                       
               <!-- Cart Summary -->
 
                  <div class="cart-amount-summary">

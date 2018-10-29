@@ -39,7 +39,7 @@
                                         </a>
                                         <ul class="pcoded-submenu">
                                             <li class=" pcoded">
-                                                <a href="javascript:void(0)" class="waves-effect waves-dark">
+                                                <a href="{{URL::to('orders/index')}}" class="waves-effect waves-dark">
                                                     <span class="pcoded-mtext">Order List</span>
                                                 </a>
                                             </li>

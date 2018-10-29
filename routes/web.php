@@ -50,6 +50,7 @@ Route::namespace('Front')->name('front.')->group(function () {
     Route::get('checkout', 'CartController@checkout')->name('checkout');
     Route::post('addtocart' , 'CartController@store');
     Route::get('clearcart', 'CartController@clearcart')->name('clear');
+    Route::post('{id}/remove', 'CartController@removeitem');
 
 
     Route::post('checkoutsave', 'CartController@saveorder');

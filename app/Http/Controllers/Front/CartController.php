@@ -128,6 +128,16 @@ class CartController extends Controller
       	return view('front.pages.thankyou');
       }
 
-  
+     public function removeitem($id)
+
+     {
+
+
+
+
+      Cart::remove($id);
+      return Redirect::back()->with('sucess_message', 'Successfully Clear Cart');
+
+     }
 
 }
